@@ -38,25 +38,4 @@ void Button::loop(void) {
 			(*_on_release_func)();
 		_has_changed = false;
 	}
-    /*
-    uint8_t reading = digitalRead(_pin);
-
-    if(reading != lastState) {
-        _debounce_timer = millis();
-    }
-
-    if((millis() - _debounce_timer) > _debounce_time) {
-        // if the button state has changed:
-        if(reading != _curr_state) {
-            _curr_state = reading;
-
-            if(_curr_state == LOW)
-                (*onPressFunc)();
-            else
-                (*onReleaseFunc)();
-        }
-    }
-
-    lastState = reading;
-    */
 }
